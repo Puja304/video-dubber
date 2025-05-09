@@ -1,0 +1,20 @@
+# Python virtual env
+flask-server/run-env/
+
+# Python junk
+__pycache__/
+*.pyc
+
+# Node
+frontend/node_modules/
+
+# Frontend build
+frontend/build/
+
+# Mac/Windows junk
+.DS_Store
+Thumbs.db
+
+# Upload folders (if you want)
+flask-server/uploads/
+flask-server/processed/
