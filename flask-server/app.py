@@ -5,7 +5,7 @@ import subprocess
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 UPLOAD_FOLDER = 'uploads'
 PROCESSED_FOLDER = 'processed'
