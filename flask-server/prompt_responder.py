@@ -1,8 +1,17 @@
+from dotenv import load_dotenv
+import os
 from openai import OpenAI
+
+
+
+load_dotenv() 
+api_key = os.getenv("OPENROUTER_API_KEY")
+if not api_key:
+    raise ValueError("Missing OPENROUTER_API_KEY in environment variables")
 
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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"
+    api_key=api_key
 )
 
 def gpt_modified(prompt, language):

@@ -1,0 +1,22 @@
+DUBIFY VERSION 1.0.0
+
+DESCRIPTION
+While it is fairly simple to be able to find instant AI generated subtitles for any video, it is without a doubt more benficial to have an auditory translation in the language one is comfortable in. Motivated by this idea, i decided to try and build a platform that does exactly this. 
+
+OVERVIEW:
+
+I use a simple python backend that takes in a video and generates a timestamped transcript for it. For each sentence in the transcript, I ask a model to try and translated it into the target languages, and make my tts model speak it. If the translation is significantly shorter or longer than the original when spoken, I ask for some paraphrtasing. Failing 5 attempts at that, I mess with the speaking speed a little to have each sentence spoken in roughly the same time. I then stitch the sentence audios together based on the start times of the original sentencesx (silence in between). Lastly, I strip the original video of audio and add the new audio, finsihing the dubbing.
+
+FRAMEWORK:
+React.js frontend and Flask backend 
+
+COMMANDS:
+
+    cd flask-server && python -m venv venv && pip install -r requirements.txt && python app.py
+    cd frontend && npm install && npm start
+
+FUTURE GOALS:
+There are a number of things I would like to imporove on in the future:
+    1. Preserve background music and only replace the speech
+    2. Increase support for lamguages
+    3. Add more naturalized tts (make it sound less robotic)
