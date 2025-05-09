@@ -22,12 +22,13 @@ export default function MainPage() {
 let currentBlobUrl = null;
 
 const handleUpload = async (file) => {
+    let BASE_URL = "https://dubify-jflc.onrender.com";
     const formData = new FormData();
     formData.append("video", file);
     formData.append("language", dubTo);
 
     try {
-        const res = await fetch("http://localhost:5000/upload", {
+        const res = await fetch("https://dubify-jflc.onrender.com/upload", {
             method: "POST",
             body: formData
         });
@@ -36,7 +37,7 @@ const handleUpload = async (file) => {
         console.log(" Backend responded with:", data);
 
         // fetch the processed video as blob
-        const videoResponse = await fetch(`http://localhost:5000/videos/${data.processed_filename}`);
+        const videoResponse = await fetch(`https://dubify-jflc.onrender.com/videos/${data.processed_filename}`);
         const videoBlob = await videoResponse.blob();
 
         // revoke previous blob url if it exists
