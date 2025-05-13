@@ -1,4 +1,5 @@
-DUBIFY VERSION 1.0.0
+DUBIFY VERSION 1.0.0 
+View: https://dubify.netlify.app/
 
 DESCRIPTION
 While it is fairly simple to be able to find instant AI generated subtitles for any video, it is without a doubt more benficial to have an auditory translation in the language one is comfortable in. Motivated by this idea, i decided to try and build a platform that does exactly this. 
@@ -11,12 +12,22 @@ FRAMEWORK:
 React.js frontend and Flask backend 
 
 COMMANDS:
+    
+    I am currently in the process of successfully connecting the frontend and backend of the deployed version (this repository), which means the website linked above is not fully 
+    functional just yet. However, my local version (in another repository) is fully functional and can be generally run by the following:
 
     cd flask-server && python -m venv venv && pip install -r requirements.txt && python app.py
     cd frontend && npm install && npm start
+
+    Some other details regarding OperRouter API keys and exact sequences and are better explained in that README file. 
+
+RESULTS:
+I have been successful in adding features that allow for video uplaods, preview of the dubbing, and an option to download the dubbed video. If not inclined to wanting to clone and run the 
+other repo locally, please refer to the video TESTRUN.mp4 in the repository to get an idea of functionality. 
 
 FUTURE GOALS:
 There are a number of things I would like to imporove on in the future:
     1. Preserve background music and only replace the speech
     2. Increase support for lamguages
     3. Add more naturalized tts (make it sound less robotic)
+
