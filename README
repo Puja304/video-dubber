@@ -14,7 +14,7 @@ React.js frontend and Flask backend
 COMMANDS:
     
     I am currently in the process of successfully connecting the frontend and backend of the deployed version (this repository), which means the website linked above is not fully 
-    functional just yet. However, my local version (in another repository) is fully functional and can be generally run by the following:
+    functional just yet. However, my local version (in https://github.com/Puja304/dubify-local) is fully functional and can be generally run by the following:
 
     cd flask-server && python -m venv venv && pip install -r requirements.txt && python app.py
     cd frontend && npm install && npm start
