@@ -23,7 +23,7 @@ COMMANDS:
 
 RESULTS:
 I have been successful in adding features that allow for video uplaods, preview of the dubbing, and an option to download the dubbed video. If not inclined to wanting to clone and run the 
-other repo locally, please refer to the video TESTRUN.mp4 in the repository to get an idea of functionality. 
+other repo locally, please refer to the following for a test run: 
 
 FUTURE GOALS:
 There are a number of things I would like to imporove on in the future:
